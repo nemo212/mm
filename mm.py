@@ -101,7 +101,7 @@ def rename():
         pass
     try:
         open("/data/data/com.termux/files/home/fb/cp.txt","r")
-        os.system("mv cp.txt cpcok.txt")
+        os.system("mv /data/data/com.termux/files/home/fb/cp.txt /data/data/com.termux/files/home/fb/cpcok.txt")
         onem = datetime.datetime.now().strftime("%d%m%y_%H%M%S")
         oldname = r"/data/data/com.termux/files/home/fb/cpcok.txt"
         newname = r"/data/data/com.termux/files/home/fb/hasil/cpcp" + onem + ".txt"
@@ -111,7 +111,7 @@ def rename():
         print("\nZONK")
     try:
         open("/data/data/com.termux/files/home/fb/ok.txt","r")
-        os.system("mv ok.txt okcok.txt")
+        os.system("mv /data/data/com.termux/files/home/fb/ok.txt /data/data/com.termux/files/home/fb/okcok.txt")
         onem = datetime.datetime.now().strftime("%d%m%y_%H%M%S")
         oldname = r"/data/data/com.termux/files/home/fb/okcok.txt"
         newname = r"/data/data/com.termux/files/home/fb/hasil/okok" + onem + ".txt"

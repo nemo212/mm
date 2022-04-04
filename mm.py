@@ -67,10 +67,6 @@ class __crack__:
 
         loop += 1
 
-     
-
-
-
     def __brute__(self):
         raw_input('\nENTER to CRACK')
         try:

